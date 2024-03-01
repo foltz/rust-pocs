@@ -1,0 +1,17 @@
+[package]
+name = "poc-http-stream"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+hyper = { version = "0.14.27", features=["full"] }
+hyper-tls = "0.5.0"
+serde = { version = "1.0.195", features = ["derive"] }
+serde_json = "1.0.111"
+tokio = { version = "1.35.1", features=["full"] }
+
+app-support = { path = "../../libs/app-support" }
+oanda-sdk = { path = "../../libs/oanda-sdk" }
