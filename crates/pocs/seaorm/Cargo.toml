@@ -1,0 +1,34 @@
+[package]
+name = "seaorm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenvy = "0.15.7"
+tokio = { version = "1.32.0", features=["full"] }
+sea-orm = { version = "0.12.2", features = [
+    "with-chrono", "with-time", "with-json", "with-rust_decimal", "with-uuid",
+    "runtime-tokio-rustls", "macros",
+    "sqlx-postgres", "postgres-array",
+    "debug-print"
+] }
+#rust_decimal = { version = "1.32.0", default-features = false, optional = true }
+rust_decimal = "1.32.0"
+rust_decimal_macros = "1.32.0"
+uuid = { version = "1.4.1", features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+] }
+
+chrono = { version = "0.4.31", features = ["serde"] }
+chrono-tz = "0.8.3"
+
+serde = "1.0.188"
+serde_json = "1.0.107"
+
+oanda-sdk = { path = "../../libs/oanda-sdk" }
+oanda-orm = { path = "../../libs/oanda-orm"}
+

@@ -1,0 +1,27 @@
+[package]
+name = "oanda-orm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+chrono = { version = "0.4.31", features = ["serde"] }
+chrono-tz = "0.8.3"
+
+sea-orm = { version = "0.12.2", features = [
+    "with-chrono", "with-time", "with-json", "with-rust_decimal", "with-uuid",
+    "runtime-tokio-rustls", "macros",
+    "sqlx-postgres", "postgres-array",
+    "debug-print"
+] }
+#rust_decimal = { version = "1.32.0", default-features = false, optional = true }
+rust_decimal = "1.32.0"
+rust_decimal_macros = "1.32.0"
+
+serde = "1.0.188"
+serde_json = "1.0.107"
+
+oanda-sdk = { path = "../oanda-sdk" }
+
