@@ -23,7 +23,7 @@ async fn queue_tasks() {
 
     queue.clear();
 
-    let write_task = tokio::spawn(write_data(queue.clone(), 100));
+    let write_task = tokio::spawn(write_data(queue.clone(), 10));
     let read_task = tokio::spawn(read_data(queue.clone()));
 
     let _ = tokio::join!(
