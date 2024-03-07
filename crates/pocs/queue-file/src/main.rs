@@ -8,7 +8,7 @@ use crate::queue::QueueWrapper;
 use crate::tasks::{read_data, write_data};
 
 // #[tokio::main(flavor = "current_thread")]
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 async fn main() {
 
     queue_tasks().await;

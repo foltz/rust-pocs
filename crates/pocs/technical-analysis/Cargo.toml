@@ -1,5 +1,5 @@
 [package]
-name = "yata"
+name = "technical-analysis"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 yata = "0.6.3"
+ta = "0.5.0"
